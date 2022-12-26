@@ -1,6 +1,6 @@
 const {authAccessToken} = require('../utils/generateAccessToken');
 
-async function authorization(req,res,next){
+async function authenticate(req,res,next){
     const token=req.headers.authorization.split(' ')[1];
         try{
               if(!token){
@@ -18,4 +18,4 @@ async function authorization(req,res,next){
             }
 
 }
-module.exports=authorization
+module.exports=authenticate
