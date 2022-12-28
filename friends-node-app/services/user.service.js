@@ -17,6 +17,7 @@ async function register(body) {
     }
 }
 
+
 module.exports = {
     register,
     getByEmail,
