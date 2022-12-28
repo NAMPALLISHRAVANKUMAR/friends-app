@@ -1,6 +1,7 @@
-const router= require('express').Router();
-const friend=require('../contollers/friendsdata.controller')
-const authenticate=require('../middleware/authenticate')
-router.get('/getFriends',authenticate,friend.getFriends)
+const router = require('express').Router();
+const friend = require('../contollers/friendsdata.controller')
+const authenticate = require('../middleware/authenticate')
 
-module.exports=router
+router.get('/getFriends', [authenticate], friend.getFriends)
+
+module.exports = router
